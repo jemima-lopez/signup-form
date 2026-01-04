@@ -62,7 +62,7 @@ body{
     gap: 1.5rem;   
 }
 
-h1{
+.card-description h1{
     color: var(--white);
     font-size: 3rem;
     padding: 2rem 2rem 0 2rem;
@@ -72,6 +72,26 @@ p{
     color: var(--white);
     font-size: 0.9rem;
     padding: 0 2rem 0 2rem;
+}
+
+.card-right{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+h2 span{
+    color: var(--white);
+    font-weight: bold;
+}
+
+h2{
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: normal;
 }
 
     .attribution { font-size: 11px; text-align: center; }
