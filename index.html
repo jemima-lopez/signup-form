@@ -15,6 +15,8 @@
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 </head>
+
+
 <body>
   
   <article class="card">
@@ -30,10 +32,10 @@
           <span>Try it free 7 days</span> then $20/mo. thereafter
         </h2>
       <div class="card-form">
-          <input type="text" placeholder="First Name">
-          <input type="text" placeholder="Last Name">
-          <input type="email" placeholder="Email Address">
-          <input type="password" placeholder="Password">
+          <input type="text" id="firstName" placeholder="First Name" required>
+          <input type="text" id="lastName" placeholder="Last Name " required>
+          <input type="email" id="email" placeholder="Email Address" required>
+          <input type="password" id="password" placeholder="Password"  required>
 
           <button>CLAIM YOUR FREE TRIAL</button>
 
@@ -41,6 +43,7 @@
       </div>
     </div>
   </article>
+  <script src="/index.js"></script>
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
