@@ -26,7 +26,7 @@ form.addEventListener('submit', function(e) {
     if (email.value.trim() === '') {
         showError(email, 'Email Address cannot be empty');
         hasError = true;
-    } else if (!validateEmail(email.value)) {
+    } else if (!isValidateEmail(email.value)) {
         showError(email, 'Looks like this is not an email');
         hasError = true;
     }
@@ -42,23 +42,23 @@ form.addEventListener('submit', function(e) {
 });
 
 function showError(input, message) {
-    input.style.border = "1px solid hsl(0, 100%, 74%)";
+    input.classList.add("input-error");
 
     const error = document.createElement("span");
-    error.classList.add("error-message", "poppins-regular-italic");
+    error.className = "error-message poppins-regular-italic";
     error.innerText = message;
-    input.parentElement.insertBefore(error, input.nextSibling);
+
+    input.insertAdjacentElement("afterend", error);
 }
 
 function clearErrors() {
-    const errors = document.querySelectorAll(".error-message");
-    errors.forEach(error => error.remove());
+    document.querySelectorAll(".error-message").forEach(error => error.remove());
 
     inputs.forEach(input => {
-        input.style.border = "1px solid hsl(246, 25%, 77%)";
+        input.classList.remove("input-error");
     });
 }
 
-function validateEmail(email) {
+function isValidateEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }

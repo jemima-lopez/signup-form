@@ -157,6 +157,15 @@ button{
     margin-top: -1rem;
 }
 
+.input-error {
+    border: 1px solid var(--Red-400) !important;
+}
+
+.input-success {
+    border: 1px solid var(--Green-400);
+}
+
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
