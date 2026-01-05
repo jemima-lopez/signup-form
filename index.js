@@ -41,3 +41,24 @@ form.addEventListener('submit', function(e) {
     }
 });
 
+function showError(input, message) {
+    input.style.border = "1px solid hsl(0, 100%, 74%)";
+
+    const error = document.createElement("span");
+    error.classList.add("error-message", "poppins-regular-italic");
+    error.innerText = message;
+    input.parentElement.insertBefore(error, input.nextSibling);
+}
+
+function clearErrors() {
+    const errors = document.querySelectorAll(".error-message");
+    errors.forEach(error => error.remove());
+
+    inputs.forEach(input => {
+        input.style.border = "1px solid hsl(246, 25%, 77%)";
+    });
+}
+
+function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}

@@ -149,6 +149,14 @@ button{
     color: var(--Red-400);
 }
 
+.error-message {
+    color: var(--Red-400);
+    font-size: 0.75rem;
+    width: 100%;
+    text-align: right;
+    margin-top: -1rem;
+}
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
 
